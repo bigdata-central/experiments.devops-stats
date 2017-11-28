@@ -1,0 +1,38 @@
+{
+ "name": "DevOps",
+ "children": [
+
+  {
+   "name": "programming languages",
+   "children": [
+    {"name": "Java", "size": 100},
+    {"name": "C++", "size": 200},
+    {"name": "Python", "size": 300},
+    {"name": "Ruby", "size": 250}
+   ]
+ },
+
+
+ {
+  "name": "frameworks",
+  "children": [
+   {"name": "AngularJS", "size": 100},
+   {"name": "Spring Boot", "size": 200},
+   {"name": "Dropwizard", "size": 300},
+   {"name": "scipy", "size": 250}
+  ]
+},
+
+{
+ "name": "operating systems",
+ "children": [
+  {"name": "Windows Server 2016", "size": 100},
+  {"name": "Debian Linux", "size": 200},
+  {"name": "Ubuntu Server", "size": 300},
+  {"name": "OS/2", "size": 250}
+ ]
+}
+
+
+ ]
+}

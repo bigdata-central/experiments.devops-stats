@@ -1,0 +1,10 @@
+ARG python_version
+FROM python:$python_version
+ARG driver_version
+
+RUN apt-get -y update &&\
+    apt-get -y install libev4 libev-dev &&\
+    pip install --upgrade pip
+
+RUN python --version && echo "install cassandra-driver: $driver_version"
+RUN pip install cassandra-driver==$driver_version cqlsh
