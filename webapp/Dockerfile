@@ -1,12 +1,15 @@
-FROM httpd:2.4-alpine
+FROM nginx:latest
 
-ENV WORKDIR "/usr/local/apache2/htdocs/"
+ENV WORKDIR "/usr/share/nginx/html/"
 WORKDIR $WORKDIR
+RUN rm -Rf $WORKDIR/*
 
 COPY . $WORKDIR
 RUN mv $WORKDIR/healthcheck.sh /usr/bin/healthcheck.sh && chmod +x /usr/bin/healthcheck.sh
 
-WORKDIR /usr/local/bin/
 
 EXPOSE 80
-CMD ["httpd-foreground"]
+STOPSIGNAL SIGTERM
+
+CMD ["nginx", "-g", "daemon off;"]
+
